@@ -2,7 +2,7 @@
 set -x
 id -u
 pwd
-docker run -t -v $(pwd):/mnt busybox:1-musl /bin/sh -c 'set -x && cd /mnt && ls -lah && id -u && cd .. && rm -rf /mnt'
+docker run -t -v $(pwd):/mnt busybox:1-musl /bin/sh -c 'set -x && cd /mnt && ls -lah && id -u && cd .. && rm -rf /mnt/.* /mnt/*'
 ls -lah
 set +x
 
