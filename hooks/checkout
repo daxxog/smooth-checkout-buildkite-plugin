@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -x
 id -u
+pwd
+docker run -t -v /mnt:$(pwd) busybox:1-musl 'set -x && cd /mnt && ls -lah && id -u'
 set +x
 
 set -eo pipefail
